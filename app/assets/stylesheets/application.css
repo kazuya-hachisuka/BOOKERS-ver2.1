@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.name {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+.title {
+	font-size :13px;
+	font-weight: bold;
+	text-align: center;
+}
+.body {
+	font-size :13px;
+	font-weight: bold;
+	text-align: center;
+}
+.table {
+	margin-left: 30px;
+	margin-top: 10px;
+}
+.tr {
+	width: 50px;
+	height: 25px;
+}
+.tb {
+	width: 100px;
+	height: 10px;
+}
+.edit {
+	margin: 20px 20px;
+}
+.title-edit {
+	font-size: 13px;
+	font-weight: bold;
+}
+.body-edit {
+	font-size: 13px;
+	font-weight: bold;
+}
+.edit-showback {
+	font-size: 13px;
+	font-weight: lighter;
+}
+.show {
+	margin: 40px 50px;
+}
+.show-editback {
+	font-size: 13px;
+	font-weight: lighter;
+	margin-left: 20px;
+}
+.title-show {
+	font-size: 13px;
+	font-weight: bolder;
+}
+.body-show {
+	font-size: 13px;
+	font-weight: bold;
+}
+.newbook {
+	font-size:20px;
+	font-weight: bolder;
+}
+.title-new {
+	font-size: 13px;
+	font-weight: lighter;
+}
+.body-new {
+	margin-bottom: 10px;
+	font-size: 13px;
+	font-weight: lighter;
+}
+.index-tb {
+	font-size: 13px;
+}
