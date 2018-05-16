@@ -2,8 +2,8 @@
 <h1 class="name">Editing Book</h1>
 <%= form_for(@book) do |f| %>
 <div>
-<h4 class="title-edit"> Title<br><%= f.text_field :title %></br></h4>
-<h4 class="body-edit"> Body<br><%= f.text_area :body %></br><br><%= f.submit 'Update book' %></br></h4>
+<h1 class="title-edit"> Title<br><%= f.text_field :title %></br></h1>
+<h1 class="body-edit"> Body<br><%= f.text_area :body %></br><br><%= f.submit 'Update book' %></br></h1>
 </div>
 <p class="edit-showback"><%= link_to 'Show', book_path(@book.id) %> |
 <%= link_to 'Back', books_path(@book.id) %><% end %>
