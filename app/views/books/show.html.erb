@@ -1,7 +1,30 @@
-<div class="show">
-<p class="aa" ><%= flash[:notice] %></p>
-<h1 class="title-show"> Title:<%= @book.title %></h1>
-<h1 class="body-show"> Body:<%= @book.body %></h1>
+<div class="page-header"></div>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-3">
+		<p class="aa" ><%= flash[:notice] %></p>
+			<div class="user-edit-image">
+			<%= render 'users/userinfo', user:@book.user %>
+			<%= render 'books/newbook', book:@newbook %>
+			</div>
+		</div>
+		<div class="col-sm-9">
+		<h1>Book detail</h1>
+			<table class="table table-hover table-inverse">
+				<tbody>
+					<tr>
+						<td><%= attachment_image_tag @book.user, :image, :fill, 60, 60, class: " profile-thumb", fallback: "no_image.jpg",:size => "60x60" %><br><%= @book.user.name %></br></td>
+						<td><%= @book.title %></td>
+						<td><%= @book.body %></td>
+						<% if @book.user == current_user %>
+						<td><%= link_to 'Edit', edit_book_path, class: 'btn btn-success' %></td>
+						<td><%= link_to 'Destroy',book_path(@book), method: :delete , class: 'btn btn-danger' %> </td>
+						<% end %>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>
-<p class="show-editback"><%= link_to 'Edit', edit_book_path(@book.id) %> |
-<%= link_to 'Back', books_path(@book.id) %></p>
+</body>
