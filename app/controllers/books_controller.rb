@@ -17,20 +17,23 @@ before_action :authenticate_user!
   end
 
   def create
-    book = Book.new(book_params)
-    book.user_id = current_user.id
+    @book = Book.new(book_params)
+    @book.user_id = current_user.id
     flash[:notice] = "Book was successfully saved."
-  if book.save
-    redirect_to book_path(book.id)
-  else
-    @books = Book.all
-    @book = Book.new
-    render :index
-  end
+    if @book.save
+      redirect_to book_path(@book.id)
+    else
+      @books = Book.all
+      render 'index'
+    end
   end
 
   def edit
     @book = Book.find(params[:id])
+     if @book.user == current_user
+    else
+    redirect_to books_path
+    end
   end
 
   def update
